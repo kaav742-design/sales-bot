@@ -1,13 +1,13 @@
 import os
 
-# Токен бота — получить у @BotFather командой /newbot
-BOT_TOKEN = os.getenv("BOT_TOKEN", "ВСТАВЬ_СЮДА_ТОКЕН_БОТА")
+# Токен бота — получен у @BotFather
+BOT_TOKEN = os.getenv("BOT_TOKEN", "8556280839:AAEn-omPPXbp0Ln3jqqydu1RsiSDg_EzZJc")
 
-# Валюта — используется только для отображения цены (RUB, USD, EUR...)
-CURRENCY = os.getenv("CURRENCY", "RUB")
+# Валюта — используется только для отображения цены
+CURRENCY = os.getenv("CURRENCY", "EUR")
 
 # ID администратора(ов) — узнать свой Telegram ID можно у бота @userinfobot
-ADMIN_IDS = [int(x) for x in os.getenv("ADMIN_IDS", "").split(",") if x.strip()]
+ADMIN_IDS = [int(x) for x in os.getenv("ADMIN_IDS", "8791811928").split(",") if x.strip()]
 
-# Chat ID, куда слать уведомления о новых заказах (можно свой личный ID)
+# Chat ID, куда слать уведомления о новых заказах
 ADMIN_CHAT_ID = os.getenv("ADMIN_CHAT_ID", "") or (ADMIN_IDS[0] if ADMIN_IDS else None)
